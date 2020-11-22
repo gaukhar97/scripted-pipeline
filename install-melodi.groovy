@@ -13,7 +13,7 @@ node {
         stage("Install Melodi"){
             sh """
                 export ANSIBLE_HOST_KEY_CHECKING=False
-                ansible-playbook -i "${params.node}," --private-key $SSHKEY ansible-melodi/main.yml -b -u $SSHUSERNAME
+                ansible-playbook -i "${ params.node }," --private-key $SSHKEY ansible-melodi/main.yml -b -u $SSHUSERNAME
             """
         }
     }    
