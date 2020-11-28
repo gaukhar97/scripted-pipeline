@@ -4,15 +4,14 @@
     }
     
     dir('sandbox/') {
-        stage("Terraform Init"){
-            sh """
-                terraform init
-            """
-        }
-        stage("Terraform Apply"){
-            sh """
-                terraform apply
-            """
-        } 
+    stage("Terraform Init"){
+        sh """
+            terraform init
+        """
+    }
+    stage("Terraform Apply"){
+        sh """
+            terraform apply
+        """
     }
 } 
