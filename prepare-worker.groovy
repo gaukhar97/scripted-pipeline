@@ -11,7 +11,7 @@ node{
          stage("Install Java") {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install java-1.8.0-openjdk-devel -y "
         }
-         stage("Install Java") {
+         stage("Install Git") {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install git -y "
         }
         stage("Install Ansible") {
