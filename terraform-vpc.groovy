@@ -7,6 +7,7 @@ properties([
 
 node{
     stage("Pull Repo"){
+        cleanWs()
         git branch: 'master', url: 'https://github.com/gaukhar97/terraform-vpc.git'
     }
     
